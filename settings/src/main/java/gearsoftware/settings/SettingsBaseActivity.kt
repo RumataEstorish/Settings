@@ -1,5 +1,6 @@
 package gearsoftware.settings
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * Settings activity
  */
-abstract class SettingsCustomActivity<T : SettingsMainFragment>() : AppCompatActivity() {
+abstract class SettingsBaseActivity<T : SettingsBaseFragment>() : AppCompatActivity() {
 
     protected abstract fun getFragment(): T
+
+    companion object {
+        const val SETTINGS_ACTIVITY_REQUEST_CODE = 11000
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +22,14 @@ abstract class SettingsCustomActivity<T : SettingsMainFragment>() : AppCompatAct
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (savedInstanceState == null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.add(R.id.settings_frame, getFragment(), SettingsMainFragment.ID)
+            transaction.add(R.id.settings_frame, getFragment(), SettingsBaseFragment.ID)
             transaction.commit()
         }
+    }
+
+    override fun onBackPressed() {
+        setResult(Activity.RESULT_OK)
+        super.onBackPressed()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

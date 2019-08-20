@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.alert_dialog_input.view.*
 /**
  * Main settings fragment
  */
-abstract class SettingsMainFragment : SettingsListFragment() {
+abstract class SettingsBaseFragment : SettingsListFragment() {
 
     companion object {
         const val ID = "MAIN_SETTINGS_FRAGMENT"
@@ -36,11 +36,11 @@ abstract class SettingsMainFragment : SettingsListFragment() {
 
         fillItems(view, getSettings(), object : ISettingsListener {
             override fun onItemClick(key: String, item: ISettingsItem) {
-                this@SettingsMainFragment.onItemClick(key, item)
+                this@SettingsBaseFragment.onItemClick(key, item)
             }
 
             override fun onItemCheckedChange(key: String, item: SettingsCheckItem, isChecked: Boolean) {
-                this@SettingsMainFragment.onItemCheckedChange(key, item, isChecked)
+                this@SettingsBaseFragment.onItemCheckedChange(key, item, isChecked)
             }
         })
 

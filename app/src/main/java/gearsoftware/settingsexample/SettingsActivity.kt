@@ -1,8 +1,8 @@
 package gearsoftware.settingsexample
 
-import gearsoftware.settings.SettingsCustomActivity
+import gearsoftware.settings.SettingsBaseActivity
 
-class SettingsActivity : SettingsCustomActivity<SettingsFragment>() {
+class SettingsActivity : SettingsBaseActivity<SettingsFragment>() {
     override fun getFragment(): SettingsFragment =
         SettingsFragment()
 }

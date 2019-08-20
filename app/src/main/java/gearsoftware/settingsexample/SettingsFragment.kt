@@ -1,14 +1,10 @@
 package gearsoftware.settingsexample
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import gearsoftware.settings.SettingsMainFragment
+import gearsoftware.settings.SettingsBaseFragment
 import gearsoftware.settings.base.*
 
-class SettingsFragment : SettingsMainFragment() {
+class SettingsFragment : SettingsBaseFragment() {
 
     companion object {
         const val TEXT_ITEM = "TEXT_ITEM"
