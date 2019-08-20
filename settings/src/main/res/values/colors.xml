@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#db4c3f</color>
+    <color name="settings_value_color">#4e9fbd</color>
+    <color name="colorDefault">#db4c3f</color>
+    <color name="colorNeuturalDark">#8c8c8c</color>
+
+    <color name="samsung_list_separator_color">#F4F5F8</color>
+    <color name="samsung_list_separator_color_dark">#343434</color>
+
+    <color name="samsung_background_color">#e8e9ee</color>
+    <color name="samsung_background_color_dark">#000000</color>
+    <color name="samsung_foreground_color">#FFFFFF</color>
+    <color name="samsung_foreground_color_dark">#212121</color>
+
+    <color name="samsung_alert_dialog_background_color_lite">#FFFFFF</color>
+    <color name="samsung_alert_dialog_background_color_dark">#000000</color>
+
+    <color name="samsung_text_primary_color_lite">#000000</color>
+    <color name="samsung_text_secondary_color_lite">#212121</color>
+
+    <color name="samsung_text_primary_color_dark">#FFFFFF</color>
+    <color name="samsung_text_secondary_color_dark">#e8e9ee</color>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_item_parent"
+    android:background="@color/samsung_foreground_color"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/SettingsItemStyle">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/settings_item_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:visibility="visible"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/settings_item_image"
+            android:layout_toStartOf="@+id/settings_item_checkbox"
+            android:textColor="#000000"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            tools:text="Настройка"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settings_item_name"
+            android:layout_alignWithParentIfMissing="true"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/settings_item_image"
+            android:layout_toStartOf="@+id/settings_item_checkbox"
+            android:visibility="visible"
+            tools:text="Описание настройки"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/settings_item_checkbox"
+            style="@style/Widget.AppCompat.CompoundButton.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+</RelativeLayout>

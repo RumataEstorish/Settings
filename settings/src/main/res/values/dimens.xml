@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_corner_radius">20dp</dimen>
+    <dimen name="samsung_margin">24dp</dimen>
+</resources>

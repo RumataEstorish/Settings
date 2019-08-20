@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SeparatorStyle.Dark">
+
+    <TextView
+        android:id="@+id/dateName"
+        style="@style/SeparatorDateNameStyle.Dark"
+        tools:text="Separator name" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/SeparatorDateStyle.Dark"
+        tools:text="Пт 23 нояб" />
+</RelativeLayout>

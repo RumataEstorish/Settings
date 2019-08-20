@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SeparatorStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="SeparatorStyle.Lite" parent="SeparatorStyle" />
+
+    <style name="SeparatorStyle.Dark" parent="SeparatorStyle" />
+
+    <style name="SettingsActivityStyle">
+
+    </style>
+
+    <style name="SettingsItemStyle">
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="SeparatorDateNameStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorDefault</item>
+    </style>
+
+    <style name="SeparatorDateStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_alignEnd">@+id/dateName</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+    </style>
+
+    <style name="SeparatorDateStyle.Lite">
+
+    </style>
+
+    <style name="SeparatorDateStyle.Dark">
+        <item name="android:textColor">@color/colorNeuturalDark</item>
+    </style>
+
+    <style name="SeparatorDateNameStyle.Dark">
+        <item name="android:textColor">@color/colorNeuturalDark</item>
+    </style>
+
+    <style name="AlertDialogOneUiStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="AlertDialogOneUiStyle.Lite" parent="AlertDialogOneUiStyle">
+        <item name="android:windowBackground">@drawable/bg_alert_dialog_lite</item>
+        <!-- Used for the title and text -->
+        <item name="colorControlNormal">@color/samsung_text_primary_color_lite</item>
+        <item name="android:textColorPrimary">@color/samsung_text_primary_color_lite</item>
+        <item name="textColorAlertDialogListItem">@color/samsung_text_primary_color_lite</item>
+    </style>
+
+    <style name="AlertDialogOneUiStyle.Dark" parent="AlertDialogOneUiStyle">
+        <item name="android:windowBackground">@drawable/bg_alert_dialog_dark</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/samsung_text_primary_color_dark</item>
+        <item name="textColorAlertDialogListItem">@color/samsung_text_primary_color_dark</item>
+        <item name="colorControlNormal">@color/samsung_text_primary_color_dark</item>
+
+    </style>
+
+</resources>

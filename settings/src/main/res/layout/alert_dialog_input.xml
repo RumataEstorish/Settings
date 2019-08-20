@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/samsung_margin"
+        android:layout_marginEnd="@dimen/samsung_margin"
+        android:autofillHints=""
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/samsung_text_primary_color_lite"
+        android:textColorHint="@color/samsung_text_secondary_color_lite"
+        tools:targetApi="o">
+
+        <requestFocus />
+    </EditText>
+
+</FrameLayout>
