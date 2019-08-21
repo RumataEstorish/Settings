@@ -4,6 +4,19 @@ Pretty basic settings implementation with POJO Activity.
 NOTE! If you need something more powerful, please look at the https://github.com/or-dvir/EasySettings
 
 ## Gradle dependency
+
+build.gradle of app:
+
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+build.gradle of module:
+
 `implementation 'com.github.rumataestorish:settings:1.0.0.2'`
 
 ## Supported settings options:
