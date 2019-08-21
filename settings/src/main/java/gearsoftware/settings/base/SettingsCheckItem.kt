@@ -22,7 +22,7 @@ class SettingsCheckItem() : SettingsItem() {
         this.description = description
     }
 
-    constructor(name: String, description: String, isChecked: Boolean) : this(name) {
+    constructor(name: String, description: String?, isChecked: Boolean) : this(name) {
         this.description = description
         this.isChecked = isChecked
     }

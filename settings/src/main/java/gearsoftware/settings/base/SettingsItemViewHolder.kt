@@ -18,7 +18,7 @@ open class SettingsItemViewHolder(itemView: View) : androidx.recyclerview.widget
 
     private val itemName: AppCompatTextView = itemView.findViewById(R.id.settings_item_name)
     private val itemDescription: AppCompatTextView = itemView.findViewById(R.id.settings_item_description)
-    private val itemLayout: RelativeLayout = itemView.findViewById(R.id.settings_item_parent)//itemName.parent as RelativeLayout//
+    private val itemLayout: RelativeLayout = itemView.findViewById(R.id.settings_item_parent)
     private val itemImage: AppCompatImageView = itemView.findViewById(R.id.settings_item_image)
     private val itemCheck: SwitchCompat = itemView.findViewById(R.id.settings_item_checkbox)
 

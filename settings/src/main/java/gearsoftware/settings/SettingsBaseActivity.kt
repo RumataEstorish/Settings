@@ -1,6 +1,7 @@
 package gearsoftware.settings
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ abstract class SettingsBaseActivity<T : SettingsBaseFragment>() : AppCompatActiv
 
     companion object {
         const val SETTINGS_ACTIVITY_REQUEST_CODE = 11000
+        const val SETTINGS_ACTIVITY_FINISHED = "gearsoftware.settings.SETTINGS_ACTIVITY_FINISHED"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,7 @@ abstract class SettingsBaseActivity<T : SettingsBaseFragment>() : AppCompatActiv
     }
 
     override fun onBackPressed() {
+        sendBroadcast(Intent(SETTINGS_ACTIVITY_FINISHED))
         setResult(Activity.RESULT_OK)
         super.onBackPressed()
     }
