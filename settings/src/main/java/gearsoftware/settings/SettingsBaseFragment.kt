@@ -19,10 +19,9 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
 
     companion object {
         const val ID = "MAIN_SETTINGS_FRAGMENT"
-        const val SETTINGS_EXTRA = "SETTINGS_EXTRA"
-        const val ACTION_SETTINGS_CHANGED = "gearsoftware.SETTINGS_CHANGED"
     }
 
+    @Suppress("MemberVisibilityCanBePrivate")
     protected val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     abstract fun getSettings(): Map<String, ISettingsItem>
@@ -31,7 +30,11 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
 
     abstract fun onItemCheckedChange(key: String, item: SettingsCheckItem, isChecked: Boolean)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = createView(inflater, container)
 
         fillItems(view, getSettings(), object : ISettingsListener {
@@ -39,7 +42,11 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
                 this@SettingsBaseFragment.onItemClick(key, item)
             }
 
-            override fun onItemCheckedChange(key: String, item: SettingsCheckItem, isChecked: Boolean) {
+            override fun onItemCheckedChange(
+                key: String,
+                item: SettingsCheckItem,
+                isChecked: Boolean
+            ) {
                 this@SettingsBaseFragment.onItemCheckedChange(key, item, isChecked)
             }
         })

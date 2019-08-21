@@ -1,6 +1,5 @@
 package gearsoftware.settings.base
 
-import gearsoftware.settings.base.ISettingsItem
 import java.util.*
 
 /**

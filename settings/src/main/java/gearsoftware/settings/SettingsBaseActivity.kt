@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * Settings activity
  */
-abstract class SettingsBaseActivity<T : SettingsBaseFragment>() : AppCompatActivity() {
+abstract class SettingsBaseActivity<T : SettingsBaseFragment> : AppCompatActivity() {
 
     protected abstract fun getFragment(): T
 
