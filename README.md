@@ -20,6 +20,10 @@ Add the dependency:
 
 `implementation 'com.github.rumataestorish:settings:1.0.0.2'`
 
+![General look](/images/1.png)
+![Edit](/images/2.png)
+![Pick](/images/3.png)
+
 ## Supported settings options:
 `SettingsItem(name: String, description: String?)` - plain text with name and description
 
