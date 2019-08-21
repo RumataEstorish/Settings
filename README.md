@@ -20,9 +20,7 @@ Add the dependency:
 
 `implementation 'com.github.rumataestorish:settings:1.0.0.2'`
 
-<img src="./images/1.png" width="250">
-<img src="./images/2.png" width="250">
-<img src="./images/3.png" width="250">
+<img src="./images/1.png" width="250"><img src="./images/2.png" width="250"><img src="./images/3.png" width="250">
 				
 ## Supported settings options:
 `SettingsItem(name: String, description: String?)` - plain text with name and description
