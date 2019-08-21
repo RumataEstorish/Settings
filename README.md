@@ -5,17 +5,18 @@ NOTE! If you need something more powerful, please look at the https://github.com
 
 ## Gradle dependency
 
-build.gradle of app:
+Add it in your root build.gradle at the end of repositories:
 
 ```
 allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-}
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
 
-build.gradle of module:
+Add the dependency:
 
 `implementation 'com.github.rumataestorish:settings:1.0.0.2'`
 
