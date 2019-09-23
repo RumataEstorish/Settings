@@ -20,7 +20,7 @@ allprojects {
 
 Add the dependency:
 
-`implementation 'com.github.rumataestorish:settings:1.0.0.8'`
+`implementation 'com.github.rumataestorish:settings:1.0.1.0'`
 				
 ## Supported settings options:
 `SettingsItem(name: String, description: String?)` - plain text with name and description
