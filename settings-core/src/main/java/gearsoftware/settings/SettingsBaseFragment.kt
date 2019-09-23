@@ -92,7 +92,7 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
         context: Context,
         title: String,
         values: Array<String>,
-        checkedPosition: BooleanArray,
+        checkedPositions: BooleanArray,
         darkTheme: Boolean = false,
         ok: (BooleanArray) -> Unit
     ) {
@@ -105,7 +105,7 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
             }
         )
             .setMultiChoiceItems(
-                values, checkedPosition
+                values, checkedPositions
             ) { _, _, _ ->
             }
         ad.setTitle(title)
