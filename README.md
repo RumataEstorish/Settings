@@ -3,7 +3,7 @@ Pretty basic settings implementation with POJO Activity.
 
 NOTE! If you need something more powerful, please look at the https://github.com/or-dvir/EasySettings
 
-<img src="./images/1.png" width="250"><img src="./images/2.png" width="250"><img src="./images/3.png" width="250">
+<img src="./images/1.png" width="250"><img src="./images/2.png" width="250"><img src="./images/3.png" width="250"><img src="./images/4.png" width="250">
 
 ## Gradle dependency
 
@@ -105,6 +105,24 @@ checkedPosition: checked position in values list
 darkTheme: if use dark theme. Currently not supported, default value is false
 
 ok: lambda function called when user click OK in dialog and returning new position as argument
+
+To show pick multiple options on item click, you can do the following:
+
+`super.showMultiPickOptions(context: Context, title: String, values: Array<String>, checkedPositions: BooleanArray, darkTheme: Boolean, ok: (BooleanArray) -> Unit)`
+
+where:
+
+context: fragment context
+
+title: title of alert dialog
+
+values: list of string values
+
+checkedPositions: checked positions in values list
+
+darkTheme: if use dark theme. Currently not supported, default value is false
+
+ok: lambda function called when user click OK in dialog and returning new positions as argument
 
 ### Second: extend SettingsBaseActivity<T: SettingsBaseFragment>
 Only one thing you should do, provide settings fragment:
