@@ -11,10 +11,13 @@ import androidx.appcompat.app.AlertDialog
 import gearsoftware.settings.base.*
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.alert_dialog_input.view.*
+import gearsoftware.settings.base.ISettingsItem
+
 
 /**
  * Main settings fragment
  */
+@Suppress("SameParameterValue")
 abstract class SettingsBaseFragment : SettingsListFragment() {
 
     companion object {
@@ -85,6 +88,45 @@ abstract class SettingsBaseFragment : SettingsListFragment() {
         dlg.show()
     }
 
+    protected fun showMultiPickOptions(
+        context: Context,
+        title: String,
+        values: Array<String>,
+        checkedPosition: BooleanArray,
+        darkTheme: Boolean = false,
+        ok: (BooleanArray) -> Unit
+    ) {
+        val ad = AlertDialog.Builder(
+            context, if (darkTheme) {
+                //R.style.AlertDialogOneUiStyle_Dark
+                R.style.AlertDialogOneUiStyle_Lite
+            } else {
+                R.style.AlertDialogOneUiStyle_Lite
+            }
+        )
+            .setMultiChoiceItems(
+                values, checkedPosition
+            ) { _, _, _ ->
+            }
+        ad.setTitle(title)
+
+
+
+        ad.setPositiveButton(android.R.string.ok) { dialogInterface, _ ->
+            val sbArray = (dialogInterface as AlertDialog).listView.checkedItemPositions
+            val res = BooleanArray(sbArray.size())
+            for (i in 0 until sbArray.size()) {
+                res[i] = sbArray.valueAt(i)
+            }
+            dialogInterface.dismiss()
+            ok(res)
+            adapter.setItems(getSettings())
+        }
+
+        val dlg = ad.create()
+        dlg.window?.setGravity(Gravity.BOTTOM)
+        dlg.show()
+    }
 
     @SuppressLint("InflateParams")
     protected fun showEditText(
